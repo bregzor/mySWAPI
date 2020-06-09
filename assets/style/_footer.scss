@@ -1,0 +1,17 @@
+.sw-footer {
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    height:30px;
+    width: 100vw;
+    background:rgb(59, 59, 59);
+    opacity: 0.8;
+
+    h4 {
+        font-size: 12px;
+    }
+    
+}

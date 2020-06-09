@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://kit.fontawesome.com/06f93047a6.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./assets/style/style.css" />
+    <title>SWAPI</title>
+  </head>
+  <body>
+    <header class="sw-header">
+      <div class="sw-header__logo-wrap">
+        <a href="index.html"><img
+          class="sw-header__logo-wrap-img"
+          src="./assets/media/logo.png"
+          alt="star wars logo"
+        /></a>
+      </div>
+      <div class="sw-header__search">
+          <input type="text" name="search" id="" placeholder="Search for your favorite SW character!">
+      </div>
+    </header>
+    <h2 class="sw-headline">Read about your favorite Star Wars characters!</h2>
+    <main class="sw-main">
+      <i class="fas fa-arrow-circle-left"></i>
+      <section class="sw-main sw-main__characters"></section>
+      <i class="fas fa-arrow-circle-right"></i>
+    </main>
+    <footer class="sw-footer">
+      <h4>CREATED BY CHRISTOPHER BERGE 2020 WITH sw-API</h4>
+    </footer>
+    <script src="./assets/js/templates.js"></script>
+    <script src="./assets/js/data.js"></script>
+    <script src="./assets/js/draw.js"></script>
+    <script src="./assets/js/pagination.js"></script>
+    <script src="./assets/js/search-characters.js"></script>
+  </body>
+</html>

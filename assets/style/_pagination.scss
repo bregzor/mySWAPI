@@ -1,0 +1,19 @@
+.fas  {
+    font-size: 32px;
+    color: white;
+    cursor: pointer;
+    align-self: center;
+    &:hover {
+        transition: color 500ms ease-in;
+        color:#eed266;
+    }
+}
+
+.fa-times-circle {
+    position: absolute;
+    right:-10px;
+    top:-10px;
+    font-size: 26px;
+    color: rgb(58, 58, 58);
+
+}
