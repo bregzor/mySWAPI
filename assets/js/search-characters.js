@@ -19,7 +19,6 @@ const initSearch = (() => {
     .addEventListener("input", (event) => {
       const input = event.target.value;
       const result = getResult(searchArr, input);
-      console.log(result)
       input.length <= 0
         ? drawCharTiles("char-collection_0", "")
         : drawCharTiles("test", result);
