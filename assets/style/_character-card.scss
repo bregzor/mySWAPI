@@ -3,6 +3,8 @@
   height: calc(100vh - 120px);
   justify-content: center;
   align-items: flex-start;
+  position: relative;
+  top:5vh;
  
   @media (max-width: 945px) {
     transition: all 250ms ease-in;

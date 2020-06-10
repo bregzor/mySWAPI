@@ -1,6 +1,6 @@
 "use strict";
 //Fetching all data to localstorage
-//Choosed to save everything to ss based on limited data dransfer(people 82)
+//Choosed to save everything to ls based on limited data dransfer(people 82)
 //Probably better to fetch via each pagination if datastream is bigger.
 
 const charContainer = document.querySelector(".sw-main .sw-main__characters");
@@ -19,6 +19,7 @@ const initData = (url) => {
         initData(pageURL);
       })
       .then((initDraw) => {
+        //Shows loader until last collection is populated to localstorage
         if(charCollection.includes("8")) {
           drawCharTiles("char-collection_0");
           swLoader(false);

@@ -1,5 +1,5 @@
 const initSearch = (() => {
- 
+
   //Pushin all content to array for search
   const searchArr = [];
   for (let i = 0; i < localStorage.length; i++) {
@@ -10,15 +10,13 @@ const initSearch = (() => {
       searchArr.push(item[j]);
     }
   }
-  console.log(searchArr);
+
   //Returns result by using array method filter
   const getResult = (arr, value) => {
-    result = arr.filter((input) => input["name"].toString().toLowerCase().includes(value.toLowerCase()));
-    result.length <= 0 ? console.log("empty") : console.log("true");
-    return result;
+    return arr.filter((input) => input["name"].toString().toLowerCase().includes(value.toLowerCase()));
   };
 
-  //Applying listener, getting result
+  //Applying listener, getting result and drawing tiles
   document
     .querySelector("input[name='search']")
     .addEventListener("input", (event) => {
