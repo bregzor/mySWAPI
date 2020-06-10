@@ -4,9 +4,11 @@ const initSearch = (() => {
   for (let i = 0; i < localStorage.length; i++) {
     const cName = `char-collection_${i}`;
     const item = getData(cName);
-    for (let j = 0; j < item.length; j++) {
-      item[j]["coll"] = cName;
-      searchArr.push(item[j]);
+    if(item !== null) {
+      for (let j = 0; j < item.length; j++) {
+        item[j]["coll"] = cName;
+        searchArr.push(item[j]);
+      }
     }
   }
 

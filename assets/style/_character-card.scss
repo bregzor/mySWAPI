@@ -10,7 +10,7 @@
     transition: all 250ms ease-in;
     align-items: flex-start;
     position: relative;
-    top:5vh;
+    top:8vh;
   }
 
   &__characters {
@@ -58,7 +58,7 @@
      
 
       @media (max-width: 768px) {
-          margin-top: 2vh;
+          margin-top: 1vh;
           margin-bottom: 0.1vh;
           height:70px;
           width: 100vw;

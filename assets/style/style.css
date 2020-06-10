@@ -222,7 +222,7 @@ body {
         -ms-flex-align: start;
             align-items: flex-start;
     position: relative;
-    top: 5vh;
+    top: 8vh;
   }
 }
 
@@ -297,7 +297,7 @@ body {
 
 @media (max-width: 768px) {
   .sw-main__characters__item {
-    margin-top: 2vh;
+    margin-top: 1vh;
     margin-bottom: 0.1vh;
     height: 70px;
     width: 100vw;
