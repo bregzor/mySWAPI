@@ -1,5 +1,4 @@
 const initSearch = (() => {
-
   //Pushin all content to array for search
   const searchArr = [];
   for (let i = 0; i < localStorage.length; i++) {
@@ -13,7 +12,9 @@ const initSearch = (() => {
 
   //Returns result by using array method filter
   const getResult = (arr, value) => {
-    return arr.filter((input) => input["name"].toString().toLowerCase().includes(value.toLowerCase()));
+    return arr.filter((input) =>
+      input["name"].toString().toLowerCase().includes(value.toLowerCase())
+    );
   };
 
   //Applying listener, getting result and drawing tiles
@@ -22,8 +23,7 @@ const initSearch = (() => {
     .addEventListener("input", (event) => {
       const input = event.target.value;
       input.length <= 0
-        ? drawCharTiles("char-collection_0", "")
+        ? drawCharTiles()
         : drawCharTiles(``, getResult(searchArr, input));
     });
 })();
-

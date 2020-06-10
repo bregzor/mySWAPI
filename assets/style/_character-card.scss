@@ -49,6 +49,7 @@
       }
 
       &-inner {
+        opacity: 0;
           &-label {
               color: #c12f2f;
               font-weight: bold;
@@ -83,4 +84,9 @@
   @media (max-width: 768px) {
     width: 100vw;
 }
+}
+
+.item-fadeIn {
+  opacity: 1;
+  transition: all 1000ms;
 }

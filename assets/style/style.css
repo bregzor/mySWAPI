@@ -286,6 +286,10 @@ body {
   height: min-content;
 }
 
+.sw-main__characters__item-inner {
+  opacity: 0;
+}
+
 .sw-main__characters__item-inner-label {
   color: #c12f2f;
   font-weight: bold;
@@ -318,6 +322,12 @@ body {
   .item-grow {
     width: 100vw;
   }
+}
+
+.item-fadeIn {
+  opacity: 1;
+  -webkit-transition: all 1000ms;
+  transition: all 1000ms;
 }
 
 .sw-footer {

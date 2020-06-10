@@ -1,6 +1,6 @@
 let count = 0;
 
-
+//Draws each collection from localstorage based on arrow step count
 const paginate = (direction) => {
   const current = `char-collection_${count}`;
   const next = `char-collection_${count + 1}`;
@@ -13,7 +13,7 @@ const paginate = (direction) => {
 
 document.querySelector(".sw-main").addEventListener("click", () => {
 
-  //PAGINATES BASED ON LEFT OR RIGHT ARROW CLICK
+  //Calls paginate function based on which arrow clicked
   const arrow = event.target.className;
   if (arrow.includes("left")) {
     count -= 1;
@@ -22,28 +22,35 @@ document.querySelector(".sw-main").addEventListener("click", () => {
     count += 1;
     paginate("right");
   }
+  //Sets state
   displayArrows();
 
-  //DRAWS CHARACTER PROFILE
-  const target = event.target;
-  if (target.className.includes("__characters__item")) {
+  //Draws character profile
+  let target = event.target;
+  if (target.className.includes("__characters__item") || target.localName === "h3") {
+
+    if(target.localName === "h3") {
+      target = target.parentElement;
+    }
+    
     const coll = target.dataset.coll;
     const name = target.textContent.trim();
     const char = getChar(name, coll);
     target.innerHTML = drawCharacterProfile(char);
+    target.querySelector(".sw-main__characters__item-inner").classList.add("item-fadeIn");
     target.classList.add("item-grow");
     target.innerHTML += drawCloseBtn();
   }
 });
 
-//CLOSES CHARACTER TILE
+//Closes character profile
 const closeCharTile = (e) => {
   e.target.parentElement.classList.remove("item-grow");
   e.target.previousElementSibling.remove();
   e.target.remove();
 };
 
-//DETERMINES IF ARROW SHOULD BE SHOWN
+//Determines if arrow should be shown
 const displayArrows = () => {
   const leftArrow = document.querySelector(".fa-arrow-circle-left");
   const rightArrow = document.querySelector(".fa-arrow-circle-right");
