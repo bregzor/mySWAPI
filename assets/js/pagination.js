@@ -1,4 +1,5 @@
-count = 0;
+let count = 0;
+
 
 const paginate = (direction) => {
   const current = `char-collection_${count}`;
@@ -11,6 +12,8 @@ const paginate = (direction) => {
 };
 
 document.querySelector(".sw-main").addEventListener("click", () => {
+
+  //PAGINATES BASED ON LEFT OR RIGHT ARROW CLICK
   const arrow = event.target.className;
   if (arrow.includes("left")) {
     count -= 1;
@@ -21,6 +24,7 @@ document.querySelector(".sw-main").addEventListener("click", () => {
   }
   displayArrows();
 
+  //DRAWS CHARACTER PROFILE
   const target = event.target;
   if (target.className.includes("__characters__item")) {
     const coll = target.dataset.coll;
@@ -32,12 +36,14 @@ document.querySelector(".sw-main").addEventListener("click", () => {
   }
 });
 
+//CLOSES CHARACTER TILE
 const closeCharTile = (e) => {
   e.target.parentElement.classList.remove("item-grow");
   e.target.previousElementSibling.remove();
   e.target.remove();
 };
 
+//DETERMINES IF ARROW SHOULD BE SHOWN
 const displayArrows = () => {
   const leftArrow = document.querySelector(".fa-arrow-circle-left");
   const rightArrow = document.querySelector(".fa-arrow-circle-right");
@@ -49,4 +55,5 @@ const displayArrows = () => {
     : (rightArrow.style.visibility = "visible");
 };
 
+//INIT ARROW STATE
 displayArrows();

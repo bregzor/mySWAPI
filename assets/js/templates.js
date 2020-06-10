@@ -20,3 +20,7 @@ const drawCharacterProfile = (data) => {
 const drawCloseBtn = () => {
   return `<i onclick='closeCharTile(event)'class="fas fa-times-circle"></i>`;
 }
+
+// const drawLoader = () => {
+//  return `<div class='sw-loader'><img src=''</div>`
+// }

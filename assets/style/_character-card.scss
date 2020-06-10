@@ -2,7 +2,7 @@
   display: flex;
   height: calc(100vh - 120px);
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
  
   @media (max-width: 945px) {
     transition: all 250ms ease-in;
@@ -55,6 +55,7 @@
      
 
       @media (max-width: 768px) {
+          margin-top: 2vh;
           margin-bottom: 0.1vh;
           height:70px;
           width: 100vw;

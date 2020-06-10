@@ -13,6 +13,8 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     font-family: 'Lexend Tera', sans-serif;
-
+    @media(max-width:768px) {
+        background:#b28987;
+    }
 }
 
